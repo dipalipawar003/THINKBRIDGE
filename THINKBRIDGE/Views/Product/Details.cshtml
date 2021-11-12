@@ -1,0 +1,50 @@
+﻿@model THINKBRIDGE.Models.PRODUCT
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PRODUCT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PRODUCT_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRODUCT_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRODUCT_DESCRIPTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRODUCT_DESCRIPTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRODUCT_PRICE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRODUCT_PRICE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRODUCT_QUANTITY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRODUCT_QUANTITY)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PRODUCT_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

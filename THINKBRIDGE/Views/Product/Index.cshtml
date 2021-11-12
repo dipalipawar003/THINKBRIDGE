@@ -1,0 +1,51 @@
+﻿@model IEnumerable<THINKBRIDGE.Models.PRODUCT>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PRODUCT_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRODUCT_DESCRIPTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRODUCT_PRICE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRODUCT_QUANTITY)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRODUCT_NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRODUCT_DESCRIPTION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRODUCT_PRICE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRODUCT_QUANTITY)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PRODUCT_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PRODUCT_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PRODUCT_ID })
+        </td>
+    </tr>
+}
+
+</table>
